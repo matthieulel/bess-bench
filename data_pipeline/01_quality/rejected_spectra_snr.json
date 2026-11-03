@@ -1,0 +1,389 @@
+{
+  "description": "BeSS spectra for which SNR could not be computed (DER_SNR). Median flux <= 0.",
+  "analysis_date": "2026-02-12",
+  "total": 29,
+  "causes": {
+    "flux_median_zero": 23,
+    "flux_median_negative": 6
+  },
+  "note": "These spectra have a null `snr` and `snr_quality = \"unknown\"` in the released dataset. They are flagged as corrupted and should be excluded from any analysis.",
+  "spectra": [
+    {
+      "spectrum_id": "4b5dfcbb4c57816de99dff9c611f7dc6",
+      "target": "PQ Pup",
+      "fits_objname": "HD67888",
+      "obs_date": "2023-02-13 11:18:58",
+      "lambda_start_A": 3698.5,
+      "lambda_stop_A": 3764.6,
+      "diagnostic": {
+        "flux_median": 0.0,
+        "pct_zeros": 93.9,
+        "cause": "flux_median_zero"
+      }
+    },
+    {
+      "spectrum_id": "2454ac27b2318644dfdaffd0468d8f54",
+      "target": "PQ Pup",
+      "fits_objname": "HD67888",
+      "obs_date": "2023-02-18 11:11:57",
+      "lambda_start_A": 3698.5,
+      "lambda_stop_A": 3764.6,
+      "diagnostic": {
+        "flux_median": 0.0,
+        "pct_zeros": 93.9,
+        "cause": "flux_median_zero"
+      }
+    },
+    {
+      "spectrum_id": "0ff8bd2d5a9575600e81ab67921b1a40",
+      "target": "IU Vel",
+      "fits_objname": "HD77320",
+      "obs_date": "2023-02-13 12:25:24",
+      "lambda_start_A": 3698.5,
+      "lambda_stop_A": 3764.6,
+      "diagnostic": {
+        "flux_median": 0.0,
+        "pct_zeros": 93.9,
+        "cause": "flux_median_zero"
+      }
+    },
+    {
+      "spectrum_id": "9c9bccd0d1fbd82624f1904d1a7b82d7",
+      "target": "V426 Pup",
+      "fits_objname": "HD68570",
+      "obs_date": "2023-02-18 12:18:10",
+      "lambda_start_A": 3698.5,
+      "lambda_stop_A": 3764.6,
+      "diagnostic": {
+        "flux_median": 0.0,
+        "pct_zeros": 93.9,
+        "cause": "flux_median_zero"
+      }
+    },
+    {
+      "spectrum_id": "8ba81632272b8aa381fa0a0b643941ca",
+      "target": "EM* MWC 622",
+      "fits_objname": "MHA92-4",
+      "obs_date": "2020-07-28 21:59:22",
+      "lambda_start_A": 3843.5,
+      "lambda_stop_A": 3910.6,
+      "diagnostic": {
+        "flux_median": -0.011499,
+        "pct_zeros": 0.0,
+        "cause": "flux_median_negative"
+      }
+    },
+    {
+      "spectrum_id": "1320228d24f8aa8ffbc8dc45dc9d6b30",
+      "target": "lam Eri",
+      "fits_objname": "lam_Eri",
+      "obs_date": "2024-12-20 12:49:43",
+      "lambda_start_A": 3917.1,
+      "lambda_stop_A": 4000.6,
+      "diagnostic": {
+        "flux_median": 0.0,
+        "pct_zeros": 96.0,
+        "cause": "flux_median_zero"
+      }
+    },
+    {
+      "spectrum_id": "6a511af936d9fa4f17f393a0a8d398ee",
+      "target": "gam Cas",
+      "fits_objname": "gamma Cas",
+      "obs_date": "2017-10-04 20:25:43",
+      "lambda_start_A": 3974.5,
+      "lambda_stop_A": 4050.6,
+      "diagnostic": {
+        "flux_median": 0.0,
+        "pct_zeros": 90.8,
+        "cause": "flux_median_zero"
+      }
+    },
+    {
+      "spectrum_id": "45edee7d59f22df91ec080160227b7b0",
+      "target": "CX Dra",
+      "fits_objname": "HD 174237",
+      "obs_date": "2020-05-31 21:25:16",
+      "lambda_start_A": 4100.0,
+      "lambda_stop_A": 4187.3,
+      "diagnostic": {
+        "flux_median": 0.0,
+        "pct_zeros": 100.0,
+        "cause": "flux_median_zero"
+      }
+    },
+    {
+      "spectrum_id": "80f27079c67cfc9975f8b048605367fd",
+      "target": "bet CMi",
+      "fits_objname": "bet cmi",
+      "obs_date": "2015-03-17 19:00:53",
+      "lambda_start_A": 4140.0,
+      "lambda_stop_A": 4215.5,
+      "diagnostic": {
+        "flux_median": 0.0,
+        "pct_zeros": 93.3,
+        "cause": "flux_median_zero"
+      }
+    },
+    {
+      "spectrum_id": "3b771de3e8bdff9efa8852fd7ed2ea97",
+      "target": "5 Cnc",
+      "fits_objname": "5cnc",
+      "obs_date": "2015-03-12 19:32:51",
+      "lambda_start_A": 4144.0,
+      "lambda_stop_A": 4215.5,
+      "diagnostic": {
+        "flux_median": 0.0,
+        "pct_zeros": 92.9,
+        "cause": "flux_median_zero"
+      }
+    },
+    {
+      "spectrum_id": "adb6b5ca0689ac1d247b36c4c8b3a711",
+      "target": "CX Dra",
+      "fits_objname": "cx dra",
+      "obs_date": "2011-05-16 20:43:16",
+      "lambda_start_A": 4426.1,
+      "lambda_stop_A": 4520.2,
+      "diagnostic": {
+        "flux_median": 0.0,
+        "pct_zeros": 94.6,
+        "cause": "flux_median_zero"
+      }
+    },
+    {
+      "spectrum_id": "3b7670ad05c18fe6c062aeeee9d9307e",
+      "target": "IL Cep",
+      "fits_objname": "HD 216629",
+      "obs_date": "1994-08-30 02:52:24",
+      "lambda_start_A": 5145.0,
+      "lambda_stop_A": 5200.4,
+      "diagnostic": {
+        "flux_median": -1.854812,
+        "pct_zeros": 0.0,
+        "cause": "flux_median_negative"
+      }
+    },
+    {
+      "spectrum_id": "17072a069b25af7885a2483edc3c161b",
+      "target": "bet CMi",
+      "fits_objname": "bet cmi",
+      "obs_date": "2015-03-17 19:00:53",
+      "lambda_start_A": 7141.0,
+      "lambda_stop_A": 7393.6,
+      "diagnostic": {
+        "flux_median": 0.0,
+        "pct_zeros": 91.5,
+        "cause": "flux_median_zero"
+      }
+    },
+    {
+      "spectrum_id": "fa5a4ca5fed407bad3424975dc8bf655",
+      "target": "V1077 Sco",
+      "fits_objname": "HD156325",
+      "obs_date": "2025-08-13 12:33:39",
+      "lambda_start_A": 7330.5,
+      "lambda_stop_A": 7595.5,
+      "diagnostic": {
+        "flux_median": 0.0,
+        "pct_zeros": 72.3,
+        "cause": "flux_median_zero"
+      }
+    },
+    {
+      "spectrum_id": "dbbb55e572781386a9f64e7949ebf69a",
+      "target": "QV Tel",
+      "fits_objname": "HD167128",
+      "obs_date": "2025-08-19 10:33:53",
+      "lambda_start_A": 7330.5,
+      "lambda_stop_A": 7595.5,
+      "diagnostic": {
+        "flux_median": 0.0,
+        "pct_zeros": 72.4,
+        "cause": "flux_median_zero"
+      }
+    },
+    {
+      "spectrum_id": "75dc556261db9be26321f825d24522dc",
+      "target": "HD 163296",
+      "fits_objname": "HD163296",
+      "obs_date": "2025-08-20 11:59:50",
+      "lambda_start_A": 7330.5,
+      "lambda_stop_A": 7595.5,
+      "diagnostic": {
+        "flux_median": 0.0,
+        "pct_zeros": 71.4,
+        "cause": "flux_median_zero"
+      }
+    },
+    {
+      "spectrum_id": "7d4c4fa6a0e9bef4a228822fc417232f",
+      "target": "V862 Ara",
+      "fits_objname": "HD158220",
+      "obs_date": "2021-09-08 11:06:54",
+      "lambda_start_A": 7360.5,
+      "lambda_stop_A": 7629.5,
+      "diagnostic": {
+        "flux_median": 0.0,
+        "pct_zeros": 83.6,
+        "cause": "flux_median_zero"
+      }
+    },
+    {
+      "spectrum_id": "b086f46f6c816ba361000ffcf21b7df2",
+      "target": "lam Eri",
+      "fits_objname": "lam_Eri",
+      "obs_date": "2024-12-20 12:49:43",
+      "lambda_start_A": 7365.5,
+      "lambda_stop_A": 7631.5,
+      "diagnostic": {
+        "flux_median": 0.0,
+        "pct_zeros": 87.8,
+        "cause": "flux_median_zero"
+      }
+    },
+    {
+      "spectrum_id": "cda66a2c9e7938578416697eebe2a24f",
+      "target": "V862 Ara",
+      "fits_objname": "HD158220",
+      "obs_date": "2021-09-08 11:06:54",
+      "lambda_start_A": 7569.0,
+      "lambda_stop_A": 7847.2,
+      "diagnostic": {
+        "flux_median": 0.0,
+        "pct_zeros": 100.0,
+        "cause": "flux_median_zero"
+      }
+    },
+    {
+      "spectrum_id": "3337456bf94b9e645e515aa88b3c343f",
+      "target": "V1077 Sco",
+      "fits_objname": "HD156325",
+      "obs_date": "2025-08-13 12:33:39",
+      "lambda_start_A": 7578.5,
+      "lambda_stop_A": 7848.3,
+      "diagnostic": {
+        "flux_median": 0.0,
+        "pct_zeros": 100.0,
+        "cause": "flux_median_zero"
+      }
+    },
+    {
+      "spectrum_id": "1adea536443ecefb28a618135a2d2d35",
+      "target": "HD 163296",
+      "fits_objname": "HD163296",
+      "obs_date": "2025-08-20 11:59:50",
+      "lambda_start_A": 7578.5,
+      "lambda_stop_A": 7848.2,
+      "diagnostic": {
+        "flux_median": 0.0,
+        "pct_zeros": 100.0,
+        "cause": "flux_median_zero"
+      }
+    },
+    {
+      "spectrum_id": "dd98302eccaecd9b4d1919923ffe9f1d",
+      "target": "QV Tel",
+      "fits_objname": "HD167128",
+      "obs_date": "2025-08-19 10:33:53",
+      "lambda_start_A": 7578.5,
+      "lambda_stop_A": 7848.1,
+      "diagnostic": {
+        "flux_median": 0.0,
+        "pct_zeros": 100.0,
+        "cause": "flux_median_zero"
+      }
+    },
+    {
+      "spectrum_id": "5356a0cb573d73f8cc80b8b48f85148c",
+      "target": "V862 Ara",
+      "fits_objname": "HD158220",
+      "obs_date": "2021-09-08 11:06:54",
+      "lambda_start_A": 7848.0,
+      "lambda_stop_A": 8115.3,
+      "diagnostic": {
+        "flux_median": 0.0,
+        "pct_zeros": 100.0,
+        "cause": "flux_median_zero"
+      }
+    },
+    {
+      "spectrum_id": "ed4884f43c728230da90bd646c2c027b",
+      "target": "12 Vul",
+      "fits_objname": "12 Vul",
+      "obs_date": "2015-10-10 21:08:39",
+      "lambda_start_A": 7860.1,
+      "lambda_stop_A": 8153.2,
+      "diagnostic": {
+        "flux_median": 0.0,
+        "pct_zeros": 98.0,
+        "cause": "flux_median_zero"
+      }
+    },
+    {
+      "spectrum_id": "f8353a4f09338fc2e3781d9e5f635298",
+      "target": "5 Cnc",
+      "fits_objname": "5 cnc",
+      "obs_date": "2014-05-04 20:43:17",
+      "lambda_start_A": 8152.1,
+      "lambda_stop_A": 8271.3,
+      "diagnostic": {
+        "flux_median": 0.0,
+        "pct_zeros": 99.2,
+        "cause": "flux_median_zero"
+      }
+    },
+    {
+      "spectrum_id": "df71e5abca81020da47d9f9007739b87",
+      "target": "del Sco",
+      "fits_objname": "DEL SCO",
+      "obs_date": "2021-07-09 23:05:10",
+      "lambda_start_A": 9289.0,
+      "lambda_stop_A": 9765.0,
+      "diagnostic": {
+        "flux_median": -0.010507,
+        "pct_zeros": 0.0,
+        "cause": "flux_median_negative"
+      }
+    },
+    {
+      "spectrum_id": "9e7057adb488f0ed309b1d50da1e93cf",
+      "target": "del Sco",
+      "fits_objname": "DEL SCO",
+      "obs_date": "2021-07-07 20:30:39",
+      "lambda_start_A": 9289.0,
+      "lambda_stop_A": 9765.0,
+      "diagnostic": {
+        "flux_median": -0.034026,
+        "pct_zeros": 0.0,
+        "cause": "flux_median_negative"
+      }
+    },
+    {
+      "spectrum_id": "e803a315836eecb0bd5d504ce54c7c1b",
+      "target": "del Sco",
+      "fits_objname": "DEL SCO",
+      "obs_date": "2021-07-09 23:05:10",
+      "lambda_start_A": 9700.0,
+      "lambda_stop_A": 10198.9,
+      "diagnostic": {
+        "flux_median": -0.059286,
+        "pct_zeros": 0.0,
+        "cause": "flux_median_negative"
+      }
+    },
+    {
+      "spectrum_id": "400eb5a28de5366ea14470ec9ab917cf",
+      "target": "del Sco",
+      "fits_objname": "DEL SCO",
+      "obs_date": "2021-07-07 20:30:39",
+      "lambda_start_A": 9700.0,
+      "lambda_stop_A": 10198.9,
+      "diagnostic": {
+        "flux_median": -0.205804,
+        "pct_zeros": 0.0,
+        "cause": "flux_median_negative"
+      }
+    }
+  ]
+}

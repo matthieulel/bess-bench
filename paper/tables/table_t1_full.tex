@@ -1,0 +1,13 @@
+\begin{tabular}{lcccccc}
+  \toprule
+  Feature & $z$ (128D) & PCA(10) & PCA(32) & PCA(50) & Raw flux (128D) & 5-D LOO \\
+  \midrule
+  ew                   & 0.993 & 1.000 & 1.000 & 1.000 & 1.000 & 0.829 \\
+  peak\_intensity      & \textbf{0.993} & 0.950 & 0.947 & 0.947 & 0.948 & 0.824 \\
+  fwhm                 & \textbf{0.508} & 0.094 & 0.122 & 0.125 & 0.121 & 0.113 \\
+  central\_depth       & \textbf{0.879} & -0.001 & -0.036 & -0.028 & -0.016 & 0.230 \\
+  delta\_v             & \textbf{0.412} & 0.139 & 0.202 & 0.192 & 0.188 & 0.326 \\
+  vr\_ratio            & \textbf{0.129} & 0.117 & 0.010 & 0.030 & 0.063 & -0.022 \\
+  \bottomrule
+\end{tabular}
+% Mean R^2 over 3 encoder seed(s); bold = best per feature.

@@ -1,0 +1,11 @@
+\begin{tabular}{lccccc}
+  \toprule
+  Feature & BeMAE $z$ (128D) & PCA(10) & PCA(32) & PCA(50) & Raw flux (128D) \\
+  \midrule
+  fwhm                 & \textbf{0.508 $\pm$ 0.037} & 0.094 $\pm$ 0.000 & 0.122 $\pm$ 0.000 & 0.125 $\pm$ 0.000 & 0.121 $\pm$ 0.000 \\
+  central\_depth       & \textbf{0.879 $\pm$ 0.023} & -0.001 $\pm$ 0.000 & -0.036 $\pm$ 0.000 & -0.028 $\pm$ 0.000 & -0.016 $\pm$ 0.000 \\
+  delta\_v             & \textbf{0.412 $\pm$ 0.056} & 0.139 $\pm$ 0.000 & 0.202 $\pm$ 0.000 & 0.192 $\pm$ 0.000 & 0.188 $\pm$ 0.000 \\
+  vr\_ratio            & \textbf{0.129 $\pm$ 0.068} & 0.117 $\pm$ 0.000 & 0.010 $\pm$ 0.000 & 0.030 $\pm$ 0.000 & 0.063 $\pm$ 0.000 \\
+  \bottomrule
+\end{tabular}
+% R^2, mean over 3 encoder seeds +- sample std across seeds; CV = GroupKFold(star_id).

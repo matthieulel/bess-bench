@@ -1,0 +1,18 @@
+\begin{tabular}{lrcc@{\hskip 1.2em}rcc}
+  \toprule
+  & \multicolumn{3}{c}{193 stars with $\geq\!30$ epochs} & \multicolumn{3}{c}{Other stars} \\
+  \cmidrule(lr){2-4}\cmidrule(lr){5-7}
+  Baseline & Pairs & Ratio & CI$_{95}$ & Pairs & Ratio & CI$_{95}$ \\
+  \midrule
+  PCA(10)$+$ridge, ctx$=$5 & 5{,}555 & \textbf{0.918} & [0.902, 0.934] & 1{,}758 & 0.994 & [0.965, 1.025] \\
+  PCA(10)$+$ridge, ctx$=$10 & 5{,}539 & \textbf{0.932} & [0.912, 0.952] & 1{,}125 & 1.036 & [0.990, 1.086] \\
+  PCA(50)$+$ridge, ctx$=$5 & 5{,}555 & \textbf{0.963} & [0.943, 0.983] & 1{,}758 & 1.028 & [0.994, 1.064] \\
+  PCA(50)$+$ridge, ctx$=$10 & 5{,}539 & 1.024 & [0.998, 1.051] & 1{,}125 & 1.095 & [1.043, 1.150] \\
+  BeMAE $z_{128}$$+$ridge, ctx$=$5 & 5{,}555 & 0.988 & [0.967, 1.010] & 1{,}758 & 1.036 & [0.990, 1.091] \\
+  BeMAE $z_{128}$$+$ridge, ctx$=$10 & 5{,}539 & 1.002 & [0.978, 1.028] & 1{,}125 & 1.052 & [0.999, 1.108] \\
+  Chronos-Bolt-S, zero-shot & 5{,}560 & \textbf{0.939} & [0.920, 0.957] & 2{,}558 & 1.035 & [1.011, 1.062] \\
+  Chronos-Bolt-B, zero-shot & 5{,}560 & \textbf{0.938} & [0.920, 0.956] & 2{,}558 & 1.005 & [0.989, 1.023] \\
+  TimesFM-2.0, zero-shot & 5{,}560 & \textbf{0.919} & [0.897, 0.941] & 2{,}558 & 1.032 & [0.997, 1.069] \\
+  \bottomrule
+\end{tabular}
+% Ratio = MAE / MAE_persist on the pairs of each group; bold = CI95 strictly below 1.

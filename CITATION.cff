@@ -1,0 +1,34 @@
+cff-version: 1.2.0
+message: "If you use BESS-Bench, please cite the paper below and the BeSS database (Neiner et al. 2011, AJ 142, 149)."
+title: "BESS-Bench: Benchmarking Spectral Representations for Be-Star Variability"
+type: software
+license: CC-BY-4.0
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.23808620
+    description: "BESS-Bench v1.0 dataset snapshot (Zenodo)"
+repository-code: "https://github.com/matthieulel/bess-bench"
+url: "https://huggingface.co/datasets/matthieulel/bess-bench"
+authors:
+  - family-names: "Le Lain"
+    orcid: "https://orcid.org/0009-0006-9151-7030"
+    given-names: "Matthieu"
+    affiliation: "IRISA, UMR CNRS 6074, Université Bretagne Sud, Vannes, France"
+  - family-names: "Lefèvre"
+    orcid: "https://orcid.org/0000-0002-2384-8202"
+    given-names: "Sébastien"
+    affiliation: "IRISA, UMR CNRS 6074, Université Bretagne Sud, Vannes, France; UiT – The Arctic University of Norway, Tromsø, Norway"
+preferred-citation:
+  type: conference-paper
+  title: "BESS-Bench: Benchmarking Spectral Representations for Be-Star Variability"
+  authors:
+    - family-names: "Le Lain"
+      orcid: "https://orcid.org/0009-0006-9151-7030"
+      given-names: "Matthieu"
+      affiliation: "IRISA, UMR CNRS 6074, Université Bretagne Sud, Vannes, France"
+    - family-names: "Lefèvre"
+      orcid: "https://orcid.org/0000-0002-2384-8202"
+      given-names: "Sébastien"
+      affiliation: "IRISA, UMR CNRS 6074, Université Bretagne Sud, Vannes, France; UiT – The Arctic University of Norway, Tromsø, Norway"
+  collection-title: "Advances in Neural Information Processing Systems (NeurIPS), Evaluations and Datasets Track"
+  year: 2026

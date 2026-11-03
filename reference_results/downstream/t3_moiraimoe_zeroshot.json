@@ -1,0 +1,31 @@
+{
+  "n_test": 8118,
+  "mae_persist": 1.6307406275405711,
+  "protocol": "cutoff MJD 59215, context <=64, 1-step, median of 100 samples, seeds 42",
+  "published_chronos_bolt_base_same_pairs": 0.9676,
+  "moirai_moe_1.0_R_small": {
+    "mae": 1.6378681013348373,
+    "ratio": 1.0043706973836886,
+    "ci95": [
+      0.9854205403692823,
+      1.023854639151052
+    ],
+    "params_M_total_verified": 117,
+    "params_M_activated_verified": 10.9,
+    "experts": 32,
+    "top_k": 2
+  },
+  "moirai_moe_1.0_R_base": {
+    "mae": 1.7295836214555411,
+    "ratio": 1.0606123329766068,
+    "ci95": [
+      1.0337708366293554,
+      1.0884814714747195
+    ],
+    "params_M_total_verified": 935,
+    "params_M_activated_verified": 85.7,
+    "experts": 32,
+    "top_k": 2
+  },
+  "note_params": "total and activated parameter counts obtained by loading the checkpoints (32 experts, top-2 routing): 117.0M / 10.9M (small) and 935.1M / 85.7M (base)"
+}

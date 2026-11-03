@@ -1,0 +1,459 @@
+{
+  "@context": {
+    "@language": "en",
+    "@vocab": "https://schema.org/",
+    "arrayShape": "cr:arrayShape",
+    "citeAs": "cr:citeAs",
+    "column": "cr:column",
+    "conformsTo": "dct:conformsTo",
+    "containedIn": "cr:containedIn",
+    "cr": "http://mlcommons.org/croissant/",
+    "rai": "http://mlcommons.org/croissant/RAI/",
+    "data": {
+      "@id": "cr:data",
+      "@type": "@json"
+    },
+    "dataType": {
+      "@id": "cr:dataType",
+      "@type": "@vocab"
+    },
+    "dct": "http://purl.org/dc/terms/",
+    "description": {
+      "@container": "@language"
+    },
+    "equivalentProperty": "cr:equivalentProperty",
+    "examples": {
+      "@id": "cr:examples",
+      "@type": "@json"
+    },
+    "extract": "cr:extract",
+    "field": "cr:field",
+    "fileProperty": "cr:fileProperty",
+    "fileObject": "cr:fileObject",
+    "fileSet": "cr:fileSet",
+    "format": "cr:format",
+    "includes": "cr:includes",
+    "isArray": "cr:isArray",
+    "isLiveDataset": "cr:isLiveDataset",
+    "jsonPath": "cr:jsonPath",
+    "key": "cr:key",
+    "md5": "cr:md5",
+    "name": {
+      "@container": "@language"
+    },
+    "parentField": "cr:parentField",
+    "path": "cr:path",
+    "recordSet": "cr:recordSet",
+    "references": "cr:references",
+    "regex": "cr:regex",
+    "repeated": "cr:repeated",
+    "replace": "cr:replace",
+    "samplingRate": "cr:samplingRate",
+    "sc": "https://schema.org/",
+    "separator": "cr:separator",
+    "source": "cr:source",
+    "subField": "cr:subField",
+    "transform": "cr:transform",
+    "prov": "http://www.w3.org/ns/prov#"
+  },
+  "@type": "sc:Dataset",
+  "conformsTo": "http://mlcommons.org/croissant/1.1",
+  "name": "BESS-Bench",
+  "description": "Long-baseline, mixed-quality Be-star spectroscopic time-series benchmark. 339,115 one-dimensional spectra (37,624 physical observations) of 1,468 Be stars spanning 1990-2025, with 81.7% of the rows from amateur observers (91.6% at the physical-observation level). The H-alpha benchmark slice holds 26,937 spectra, of which 26,858 are scored. Three benchmarked tasks (SpecProbe H-alpha feature regression, LineTransfer H-beta-to-H-alpha generalisation, EWForecast short-horizon EW(H-alpha) forecasting), frozen per-star splits and reference baselines.",
+  "version": "1.0.0",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "url": "https://huggingface.co/datasets/matthieulel/bess-bench",
+  "sameAs": "https://doi.org/10.5281/zenodo.23808620",
+  "keywords": [
+    "astronomy",
+    "astrophysics",
+    "spectroscopy",
+    "Be stars",
+    "stellar spectra",
+    "time series",
+    "representation learning",
+    "forecasting",
+    "benchmark",
+    "citizen science"
+  ],
+  "citeAs": "@inproceedings{bess_bench_2026, title={BESS-Bench: Benchmarking Spectral Representations for Be-Star Variability}, author={Le Lain, Matthieu and Lefèvre, Sébastien}, booktitle={Advances in Neural Information Processing Systems (NeurIPS), Evaluations and Datasets Track}, year={2026}, url={https://huggingface.co/datasets/matthieulel/bess-bench}}",
+  "creator": [
+    {
+      "@type": "Person",
+      "name": "Matthieu Le Lain"
+    },
+    {
+      "@type": "Person",
+      "name": "Sébastien Lefèvre"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "IRISA, Université Bretagne Sud"
+  },
+  "datePublished": "2026-05-01",
+  "isLiveDataset": false,
+  "distribution": [
+    {
+      "@type": "cr:FileObject",
+      "@id": "hf-dataset-repo",
+      "name": "hf-dataset-repo",
+      "description": "HuggingFace dataset repository hosting the 21-shard Parquet release and this Croissant descriptor.",
+      "contentUrl": "https://huggingface.co/datasets/matthieulel/bess-bench",
+      "encodingFormat": "git+https",
+      "sha256": "main"
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "parquet-shards",
+      "name": "parquet-shards",
+      "description": "Arrow/Parquet shards produced by `datasets.save_to_disk`.",
+      "containedIn": {
+        "@id": "hf-dataset-repo"
+      },
+      "encodingFormat": "application/vnd.apache.parquet",
+      "includes": "data/train-*.parquet"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "splits-csv",
+      "name": "splits-csv",
+      "description": "Deterministic per-star split assignment.",
+      "containedIn": {
+        "@id": "hf-dataset-repo"
+      },
+      "contentUrl": "https://huggingface.co/datasets/matthieulel/bess-bench/resolve/main/splits.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "34a3f6e037a355a7eebd916e844d8eba1640d1ff4e158db0e5b8fb07b2169fe5"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "star-list-csv",
+      "name": "star-list-csv",
+      "description": "One row per star with aggregates (n_spectra, coords, MJD range, amateur fraction).",
+      "containedIn": {
+        "@id": "hf-dataset-repo"
+      },
+      "contentUrl": "https://huggingface.co/datasets/matthieulel/bess-bench/resolve/main/star_list.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "a47874c15056e14e45ce12eff50c99ef55206724db1f1868b30061bd84361219"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "known-issues-csv",
+      "name": "known-issues-csv",
+      "description": "Rows of the v1.0 files affected by a known issue (wavelength array stored in nm).",
+      "containedIn": {
+        "@id": "hf-dataset-repo"
+      },
+      "contentUrl": "https://huggingface.co/datasets/matthieulel/bess-bench/resolve/main/known_issues_v1.0.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "2f0b9e422b967c001a8c387c3eb60b9d4b859151fc4c4ceefb3a0458c8595315"
+    }
+  ],
+  "recordSet": [
+    {
+      "@type": "cr:RecordSet",
+      "@id": "spectra",
+      "name": "spectra",
+      "description": "One row per spectrum; arrays bundled inline.",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "spectra/spectrum_id",
+          "name": "spectrum_id",
+          "dataType": "sc:Text",
+          "description": "Unique MD5 identifier.",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-shards"
+            },
+            "extract": {
+              "column": "spectrum_id"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "spectra/star_name",
+          "name": "star_name",
+          "dataType": "sc:Text",
+          "description": "Canonical de-duplicated star name.",
+          "references": {
+            "field": {
+              "@id": "stars/star_name"
+            }
+          },
+          "source": {
+            "fileSet": {
+              "@id": "parquet-shards"
+            },
+            "extract": {
+              "column": "star_name"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "spectra/wavelength",
+          "name": "wavelength",
+          "dataType": "sc:Float",
+          "repeated": true,
+          "description": "Native wavelength grid (Angstrom).",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-shards"
+            },
+            "extract": {
+              "column": "wavelength"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "spectra/flux",
+          "name": "flux",
+          "dataType": "sc:Float",
+          "repeated": true,
+          "description": "Calibrated flux array.",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-shards"
+            },
+            "extract": {
+              "column": "flux"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "spectra/flux_error",
+          "name": "flux_error",
+          "dataType": "sc:Float",
+          "repeated": true,
+          "description": "Flux uncertainty (nullable).",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-shards"
+            },
+            "extract": {
+              "column": "flux_error"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "spectra/mjd",
+          "name": "mjd",
+          "dataType": "sc:Float",
+          "description": "Modified Julian Date.",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-shards"
+            },
+            "extract": {
+              "column": "mjd"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "spectra/snr",
+          "name": "snr",
+          "dataType": "sc:Float",
+          "description": "DER_SNR.",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-shards"
+            },
+            "extract": {
+              "column": "snr"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "spectra/observer_type",
+          "name": "observer_type",
+          "dataType": "sc:Text",
+          "description": "amateur / professional / unknown.",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-shards"
+            },
+            "extract": {
+              "column": "observer_type"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "spectra/is_echelle_order",
+          "name": "is_echelle_order",
+          "dataType": "sc:Boolean",
+          "description": "True when this row is an individual echelle order.",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-shards"
+            },
+            "extract": {
+              "column": "is_echelle_order"
+            }
+          }
+        }
+      ],
+      "key": {
+        "@id": "spectra/spectrum_id"
+      }
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "stars",
+      "name": "stars",
+      "description": "Per-star aggregates and official split assignment.",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "stars/star_name",
+          "name": "star_name",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "star-list-csv"
+            },
+            "extract": {
+              "column": "star_name"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "stars/n_spectra",
+          "name": "n_spectra",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "star-list-csv"
+            },
+            "extract": {
+              "column": "n_spectra"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "stars/split",
+          "name": "split",
+          "dataType": "sc:Text",
+          "description": "train / validation / test (by-star).",
+          "source": {
+            "fileObject": {
+              "@id": "star-list-csv"
+            },
+            "extract": {
+              "column": "split"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "stars/ra_deg",
+          "name": "ra_deg",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "star-list-csv"
+            },
+            "extract": {
+              "column": "ra_deg"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "stars/dec_deg",
+          "name": "dec_deg",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "star-list-csv"
+            },
+            "extract": {
+              "column": "dec_deg"
+            }
+          }
+        }
+      ],
+      "key": {
+        "@id": "stars/star_name"
+      }
+    }
+  ],
+  "rai:dataCollection": "Spectra were uploaded voluntarily by amateur and professional observers to the BeSS public archive (LIRA, formerly LESIA; Observatoire de Paris) between 1990 and 2025. We harvested them via the public SSA/VO protocol; curation consisted of quality annotation (no rejection), regex-based instrument normalisation, spatial+textual star-name deduplication (4755 raw names -> 1468 canonical stars), and schema export to HuggingFace Parquet.",
+  "rai:dataCollectionType": [
+    "Archive",
+    "Citizen science"
+  ],
+  "rai:dataCollectionRawData": "Raw FITS files remain on the BeSS archive at http://basebe.obspm.fr and can be retrieved by any researcher with a free account. This dataset redistributes only the cleaned, ML-ready export.",
+  "rai:dataCollectionTimeframe": "1990-03-11 / 2025-12-30",
+  "rai:dataImputationProtocol": "flux_error is left null when absent from FITS (no imputation). spectral_resolution falls back to a per-spectrograph median only when the header value is missing; the fallback is flagged via instrument_confidence < 1.",
+  "rai:dataPreprocessingProtocol": [
+    "SNR estimation via DER_SNR (Stoehr 2008) and continuum windows.",
+    "Spectrograph/telescope normalisation via regex parsers (99.2 % mean confidence).",
+    "Coordinate validation and longitude normalisation.",
+    "Star-name deduplication (textual Levenshtein + 10-arcsec SIMBAD cross-match).",
+    "Echelle-order flagging (spectrograph class + structural checks).",
+    "Deterministic per-star split via md5('bess_bench_v1::'+star_name)."
+  ],
+  "rai:dataAnnotationProtocol": "All v1.0 scored task labels (SpecProbe, LineTransfer, EWForecast) are computed automatically from the spectra by downstream/compute_spectral_features.py. Halpha morphological classes (single-peak, double-peak, shell, pure-absorption) are derived programmatically from line measurements as dataset-level metadata, not as a scored benchmark task in v1.0. No manual annotation and no crowdworkers were involved in v1.0.",
+  "rai:dataAnnotationAnalysis": "All v1.0 scored task labels are derived automatically from spectral measurements; inter-annotator agreement is therefore not applicable.",
+  "rai:dataAnnotationPlatform": "Internal Jupyter tooling; no third-party platform.",
+  "rai:dataUseCases": [
+    "Self-supervised representation learning on stellar spectra.",
+    "Short-horizon temporal forecasting under persistence baselines.",
+    "Cross-line generalisation studies on Balmer-series profiles.",
+    "Cross-instrument normalisation studies (amateur vs professional)."
+  ],
+  "rai:dataLimitations": [
+    "Northern-hemisphere bias (dec > -30 deg dominated).",
+    "Brightness bias toward V < 8 Be stars.",
+    "Heavy re-use of a few popular amateur spectrographs (LHIRES III, eShel).",
+    "Oversampling of a handful of historically active targets (gamma Cas, zeta Tau, delta Sco).",
+    "flux_error is null for ~55 % of spectra.",
+    "Scored targets exist for the H-alpha slice only (26,858 spectra of 1,428 stars); other lines are released but not scored in v1.0.",
+    "Known issue in v1.0: for 2,311 rows (0.7%: MUSICOS and VLT/FLAMES spectra) the wavelength array is stored in nm instead of Angstrom while lambda_min/lambda_max are in Angstrom; one further row has inconsistent wavelength metadata. The rows are listed in known_issues_v1.0.csv.",
+    "Known issue in v1.0: 69 VLT/FLAMES rows are labelled observer_type='amateur' and should read 'professional'.",
+    "Not recommended for: absolute spectrophotometry, deriving stellar parameters without accounting for the heterogeneous instruments, or re-identifying individual observers."
+  ],
+  "rai:dataSocialImpact": "BESS-Bench formalises 35 years of volunteer astronomical labour into a reproducible ML benchmark, giving credit to the amateur community and enabling cross-disciplinary studies of citizen-science data quality.",
+  "rai:dataBiases": [
+    "Geographic bias (northern hemisphere)",
+    "Instrument bias (popular amateur spectrographs oversampled)",
+    "Target bias (famous variable Be stars oversampled)"
+  ],
+  "rai:personalSensitiveInformation": "No personally identifiable information is distributed. FITS OBSERVER keywords are stripped at export. Site coordinates (latitude, longitude) are rounded to 0.1 deg (approx. 11 km) and site elevation is rounded to the nearest 100 m to prevent observer re-identification while preserving statistical utility (hemispheric bias, time-zone effects, air-mass / extinction analyses).",
+  "rai:hasSyntheticData": false,
+  "rai:dataReleaseMaintenancePlan": "Annual v1.x minor releases integrating new BeSS harvests and bug fixes. Versions pinned by Git tag and HuggingFace revision. Existing splits are immutable within v1.x to preserve benchmark comparability. Opt-out requests from observers are honoured within 30 days in the next minor release.",
+  "prov:wasDerivedFrom": [
+    {
+      "@id": "http://basebe.obspm.fr/basebe/"
+    }
+  ],
+  "prov:wasGeneratedBy": [
+    {
+      "@type": "prov:Activity",
+      "prov:label": "Data collection",
+      "description": "Spectra harvested from the public BeSS Simple Spectral Access endpoint (http://basebe.obspm.fr/basebe/ssa.php) with a scripted client (data_pipeline/ in the code repository); harvest closed in December 2025. Observations span 1990-03-11 to 2025-12-30 and come from amateur and professional observers worldwide (northern-hemisphere bias). Every spectrum had been reviewed by the BeSS validators before entering the archive. Each FITS file was downloaded once and kept with its original headers."
+    },
+    {
+      "@type": "prov:Activity",
+      "prov:label": "Preprocessing",
+      "description": "Deterministic, scripted steps (data_pipeline/01_quality, 02_cleanup, 03_export): (1) DER_SNR estimation (Stoehr 2008), exposed as a per-spectrum covariate, with no SNR-based rejection at the corpus level; (2) regex-based normalisation of instrument names into a controlled vocabulary; (3) coordinate validation and longitude normalisation; (4) MJD validation; (5) derivation of observer_type (amateur / professional / unknown) from the instrument; (6) star-name resolution: 4,755 raw object strings mapped to 1,468 canonical stars by textual matching and SIMBAD cross-match; (7) echelle-order flagging; (8) deterministic train/validation/test assignment of stars via md5('bess_bench_v1::' + star_name). Observer names are removed and site coordinates are rounded (0.1 deg, 100 m). Flux and wavelength arrays are released as received."
+    },
+    {
+      "@type": "prov:Activity",
+      "prov:label": "Data annotation",
+      "description": "No human annotation. All scored targets (six H-alpha line features) are computed analytically from the spectra by downstream/compute_spectral_features.py and downstream/compute_hbeta_features.py in the code repository; a scored target requires SNR >= 10 and full coverage of the line window. Morphological classes are derived by fixed rules from these features and are descriptive only. No crowdworkers, no LLM and no synthetic agent were involved; inter-annotator agreement is not applicable."
+    }
+  ]
+}

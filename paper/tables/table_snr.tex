@@ -1,0 +1,23 @@
+\begin{tabular}{llccccc}
+  \toprule
+  Feature & Repr.\ & low ($<\!60$) & medium & good & excellent ($\geq\!300$) & all \\
+   &  & $n\!=\!2{,}614$ & $5{,}395$ & $9{,}104$ & $9{,}747$ & \\
+  \midrule
+  \texttt{fwhm}              & BeMAE    & \textbf{0.301 $\pm$ 0.075} & \textbf{0.511 $\pm$ 0.036} & \textbf{0.523 $\pm$ 0.048} & \textbf{0.524 $\pm$ 0.045} & \textbf{0.517 $\pm$ 0.036} \\
+                             & PCA(10)  & 0.173 & 0.075 & 0.072 & 0.117 & 0.114 \\
+                             & Flux128  & 0.031 & 0.080 & 0.089 & 0.186 & 0.141 \\
+  \midrule
+  \texttt{central\_depth}    & BeMAE    & \textbf{0.807 $\pm$ 0.083} & \textbf{0.893 $\pm$ 0.021} & \textbf{0.894 $\pm$ 0.014} & \textbf{0.883 $\pm$ 0.018} & \textbf{0.882 $\pm$ 0.024} \\
+                             & PCA(10)  & 0.023 & -0.022 & -0.016 & 0.034 & 0.022 \\
+                             & Flux128  & -0.251 & 0.005 & -0.000 & 0.065 & 0.012 \\
+  \midrule
+  \texttt{delta\_v}          & BeMAE    & \textbf{0.358 $\pm$ 0.112} & \textbf{0.447 $\pm$ 0.041} & \textbf{0.426 $\pm$ 0.037} & \textbf{0.539 $\pm$ 0.029} & \textbf{0.449 $\pm$ 0.048} \\
+                             & PCA(10)  & 0.073 & 0.163 & 0.137 & 0.291 & 0.174 \\
+                             & Flux128  & 0.095 & 0.220 & 0.186 & 0.353 & 0.223 \\
+  \midrule
+  \texttt{vr\_ratio}         & BeMAE    & -0.068 $\pm$ 0.424 & \textbf{0.187 $\pm$ 0.033} & \textbf{0.227 $\pm$ 0.009} & 0.186 $\pm$ 0.062 & \textbf{0.165 $\pm$ 0.071} \\
+                             & PCA(10)  & -0.136 & 0.122 & 0.159 & \textbf{0.322} & 0.150 \\
+                             & Flux128  & -0.335 & 0.098 & 0.139 & 0.263 & 0.091 \\
+  \bottomrule
+\end{tabular}
+% R^2 of the out-of-fold SpecProbe predictions per SNR bin; BeMAE: mean +- sample std over 3 encoder seed(s); CV = GroupKFold(star_id).

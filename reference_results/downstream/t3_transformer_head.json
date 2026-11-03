@@ -1,0 +1,71 @@
+{
+  "description": "Causal Transformer head on frozen BeMAE embedding sequences (seed-42 encoder), next-embedding objective with delta prediction and dt conditioning; EW read out by a post-hoc ridge on the predicted embedding. Evaluated with the head's own harness (stars with >= 5 epochs and >= 3 post-cutoff epochs), not on the pairs of the ridge baselines.",
+  "head_seeds": [
+    42,
+    123,
+    456
+  ],
+  "model": {
+    "d_input": 128,
+    "d_model": 128,
+    "n_layers": 4,
+    "n_heads": 4,
+    "d_ff": 256,
+    "dropout": 0.1,
+    "max_seq_len": 512,
+    "t_ref": 48000.0,
+    "t_max": 36500.0,
+    "predict_delta": true,
+    "condition_dt": true
+  },
+  "train": {
+    "min_obs": 5,
+    "min_test_obs": 3,
+    "cutoff_mjd": 59215.0,
+    "epochs": 150,
+    "batch_size": 32,
+    "lr": 0.0003,
+    "weight_decay": 0.05,
+    "warmup_epochs": 8,
+    "stride": 32,
+    "max_seq_len": 512,
+    "mask_ratio": 0.15
+  },
+  "per_seed": {
+    "42": {
+      "n_stars": 479,
+      "n_predictions": 6495,
+      "mae_model": 1.882568285586255,
+      "mae_persist": 1.602057387416084,
+      "ratio_mae": 1.1750941635259395,
+      "r2_model": 0.9613667670133298,
+      "n_params": 626850
+    },
+    "123": {
+      "n_stars": 479,
+      "n_predictions": 6495,
+      "mae_model": 1.7754687581668387,
+      "mae_persist": 1.602057387416084,
+      "ratio_mae": 1.1082429207048852,
+      "r2_model": 0.9628347198462369,
+      "n_params": 626850
+    },
+    "456": {
+      "n_stars": 479,
+      "n_predictions": 6495,
+      "mae_model": 1.9545168196723322,
+      "mae_persist": 1.602057387416084,
+      "ratio_mae": 1.220004248926888,
+      "r2_model": 0.9604477193691953,
+      "n_params": 626850
+    }
+  },
+  "aggregate": {
+    "ratio_mae_mean": 1.1677804443859043,
+    "ratio_mae_std_ddof0": 0.04591852558050367,
+    "ratio_mae_std_ddof1": 0.056238478706585354,
+    "n_predictions": 6495,
+    "n_stars": 479,
+    "mae_persist": 1.602057387416084
+  }
+}

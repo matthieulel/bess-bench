@@ -1,0 +1,25 @@
+{
+  "n_test": 8118,
+  "mae_persist": 1.6307406275405711,
+  "protocol": "cutoff MJD 59215, context <=64, 1-step, published star filter (>=3 epochs), seeds 42",
+  "published_ts_fm_same_pairs": {
+    "chronos_bolt_base": 0.9676,
+    "timesfm_2_0_500m": 0.9689
+  },
+  "time_moe_50M": {
+    "mae": 1.6107602120660862,
+    "ratio": 0.9877476435326085,
+    "ci95": [
+      0.9697209734946682,
+      1.0062180354241308
+    ]
+  },
+  "time_moe_200M": {
+    "mae": 1.6079634461396255,
+    "ratio": 0.9860326154777308,
+    "ci95": [
+      0.9681008368220905,
+      1.0042594217285294
+    ]
+  }
+}

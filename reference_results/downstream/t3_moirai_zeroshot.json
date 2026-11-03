@@ -1,0 +1,29 @@
+{
+  "n_test": 8118,
+  "mae_persist": 1.6307406275405711,
+  "protocol": "cutoff MJD 59215, context <=64, 1-step, median of 100 samples, seeds 42",
+  "moirai_1.1_R_base": {
+    "params_M": 91,
+    "mae": 1.6652382615054169,
+    "ratio": 1.0211545805520734,
+    "ci95": [
+      1.0023453157697084,
+      1.0406649067974698
+    ]
+  },
+  "moirai_1.1_R_large": {
+    "params_M": 311,
+    "mae": 1.6170897563370275,
+    "ratio": 0.9916290359282142,
+    "ci95": [
+      0.9749029024564533,
+      1.008345391855578
+    ]
+  },
+  "published_ts_fm_same_pairs": {
+    "chronos_bolt_base": 0.9676,
+    "timesfm_2_0_500m": 0.9689,
+    "source": "reference_results/downstream/t3_ts_fm_baselines.json"
+  },
+  "note": "population = published load_aligned_data filter (>=3 finite aligned epochs); n and mae_persist match the published TS-FM runs exactly"
+}

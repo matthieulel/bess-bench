@@ -1,0 +1,33 @@
+\begin{tabular}{lrrrcrr}
+  \toprule
+  Baseline & MAE & MAE\textsubscript{persist} & Ratio & CI$_{95}$ of ratio & $R^2$ & Rel.\ err. \\
+  \midrule
+  \multicolumn{7}{l}{\emph{Trained in-domain: ridge head on past representations (ctx$=$5: 7{,}313 pairs, 621 stars)}} \\
+  PCA(10)$+$ridge, ctx$=$5 & 1.387 & 1.472 & \textbf{0.942} & [0.927, 0.957] & 0.978 & 24.9\% \\
+  PCA(10)$+$ridge, ctx$=$10 & 1.372 & 1.435 & \textbf{0.956} & [0.937, 0.976] & 0.978 & 24.9\% \\
+  PCA(50)$+$ridge, ctx$=$5 & 1.448 & 1.472 & 0.983 & [0.966, 1.002] & 0.977 & 26.0\% \\
+  PCA(50)$+$ridge, ctx$=$10 & 1.492 & 1.435 & 1.040 & [1.016, 1.065] & 0.976 & 27.1\% \\
+  BeMAE $z_{128}$$+$ridge, ctx$=$5 & 1.477 & 1.472 & 1.003 & [0.982, 1.026] & 0.975 & 26.5\% \\
+  BeMAE $z_{128}$$+$ridge, ctx$=$10 & 1.454 & 1.435 & 1.014 & [0.991, 1.038] & 0.977 & 26.4\% \\
+  \midrule
+  \multicolumn{7}{l}{\emph{Zero-shot time-series foundation models (8{,}118 pairs, 846 stars)}} \\
+  Chronos-Bolt-S (48\,M) & 1.600 & 1.631 & \textbf{0.981} & [0.966, 0.997] & -- & 27.7\% \\
+  Chronos-Bolt-B (205\,M) & 1.578 & 1.631 & \textbf{0.968} & [0.955, 0.980] & -- & 27.3\% \\
+  TimesFM-2.0 (500\,M) & 1.580 & 1.631 & \textbf{0.969} & [0.949, 0.989] & -- & 27.4\% \\
+  Moirai-1.1-R-base (91\,M) & 1.665 & 1.631 & 1.021 & [1.002, 1.041] & -- & 28.8\% \\
+  Moirai-1.1-R-large (311\,M) & 1.617 & 1.631 & 0.992 & [0.975, 1.008] & -- & 28.0\% \\
+  Moirai-MoE-1.0-R-small (117\,M) & 1.638 & 1.631 & 1.004 & [0.985, 1.024] & -- & 28.4\% \\
+  Moirai-MoE-1.0-R-base (935\,M) & 1.730 & 1.631 & 1.061 & [1.034, 1.088] & -- & 30.0\% \\
+  Time-MoE-50M (113\,M) & 1.611 & 1.631 & 0.988 & [0.970, 1.006] & -- & 27.9\% \\
+  Time-MoE-200M (453\,M) & 1.608 & 1.631 & 0.986 & [0.968, 1.004] & -- & 27.9\% \\
+  \midrule
+  \multicolumn{7}{l}{\emph{Trained head on a frozen foundation model (the 7{,}313 ctx$=$5 pairs)}} \\
+  Chronos-Bolt-B $+$ trained linear head & 1.372 & 1.472 & \textbf{0.932} & [0.918, 0.947] & -- & 24.6\% \\
+  \quad control: ridge on the 5-epoch EW context & 1.391 & 1.472 & \textbf{0.945} & [0.931, 0.959] & -- & 25.0\% \\
+  \quad Chronos-Bolt-B zero-shot, same pairs & 1.407 & 1.472 & \textbf{0.955} & [0.941, 0.970] & -- & 25.3\% \\
+  \midrule
+  \multicolumn{7}{l}{\emph{Causal Transformer head on BeMAE embeddings$^{\ddagger}$ (6{,}495 pairs, 479 stars)}} \\
+  BeMAE $z_{128}$ $+$ causal Transformer (3 seeds) & 1.871 & 1.602 & 1.17 $\pm$ 0.05 & -- & 0.962 & -- \\
+  \bottomrule
+\end{tabular}
+% MAE in Angstrom; Ratio = MAE / MAE_persist on the same pairs; bold = CI95 strictly below 1; Rel. err. = MAE / median |EW| of the test targets.

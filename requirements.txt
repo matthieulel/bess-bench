@@ -1,0 +1,50 @@
+# BESS-Bench runtime dependencies
+# Python >= 3.10
+
+# Core scientific stack
+numpy>=1.24.0
+pandas>=2.0.0
+scipy>=1.11.0
+
+# Deep learning
+torch>=2.0.0
+
+# Classical ML
+scikit-learn>=1.3.0
+
+# Dataset IO / HF
+# datasets>=3.0 required: the published parquet schema uses the modern
+# Features API ("List" feature type), unsupported by datasets 2.x.
+# huggingface_hub<1.0 required: the [cli] extra (pulled in by timesfm)
+# was removed in 1.0+; without this upper bound pip backtracks heavily.
+datasets>=3.0.0
+huggingface_hub[cli]>=0.27.0,<1.0
+pyarrow>=14.0.0
+
+# Spectral data parsing
+astropy>=6.0.0
+
+# Visualisation (figures in paper)
+matplotlib>=3.8.0
+umap-learn>=0.5.4
+
+# Progress bars
+tqdm>=4.66.0
+
+# Time-series foundation baselines for EWForecast (zero-shot Chronos-Bolt + TimesFM)
+chronos-forecasting>=2.2.0
+timesfm>=1.3.0
+
+# Experiment tracking: imported by stage1_encoder/train.py. Logging is off
+# with WANDB_MODE=disabled (the default of the reproduction scripts).
+wandb>=0.16.0
+
+# Additional EWForecast forecasters (optional, EXTRA_TSFM=1). Install them in
+# a separate environment if their pins conflict with the packages above.
+# transformers>=4.40,<5      # Time-MoE (downstream/t3_timemoe_zeroshot.py)
+# uni2ts>=1.2.0              # Moirai, Moirai-MoE (downstream/t3_moirai*_zeroshot.py)
+
+# Pipeline-only (optional, only needed to rebuild the HF release)
+# duckdb>=1.0.0
+# httpx>=0.25.0
+# python-dotenv>=1.0.0

@@ -1,0 +1,139 @@
+{
+  "task": "T2_cross_line_probing",
+  "description": "Cross-line probing: H\u03b2 window representations -> predict H\u03b1 spectral features. Justifies full-spectrum release of BESS-Bench.",
+  "n_aligned_pairs": 2525,
+  "n_stars_covered": 1094,
+  "n_stars_aligned": 1090,
+  "cv": "GroupKFold(star_id)",
+  "hbeta_window_AA": [
+    4811.3,
+    4911.3
+  ],
+  "representations": [
+    "H\u03b2 flux (128D)",
+    "H\u03b2 PCA(10)",
+    "H\u03b2 PCA(50)"
+  ],
+  "results": {
+    "ew": {
+      "H\u03b2 flux (128D)": {
+        "r2_mean": 0.7054654876228881,
+        "r2_std": 0.0673992689728714,
+        "n_valid": 2525,
+        "n_stars": 1090
+      },
+      "H\u03b2 PCA(10)": {
+        "r2_mean": 0.6612728875911873,
+        "r2_std": 0.05765062478121503,
+        "n_valid": 2525,
+        "n_stars": 1090
+      },
+      "H\u03b2 PCA(50)": {
+        "r2_mean": 0.6631621876874092,
+        "r2_std": 0.05714379587324005,
+        "n_valid": 2525,
+        "n_stars": 1090
+      }
+    },
+    "fwhm": {
+      "H\u03b2 flux (128D)": {
+        "r2_mean": 0.0044997663089759495,
+        "r2_std": 0.038271718784582034,
+        "n_valid": 2508,
+        "n_stars": 1086
+      },
+      "H\u03b2 PCA(10)": {
+        "r2_mean": 0.004714962355561458,
+        "r2_std": 0.08593227989640288,
+        "n_valid": 2508,
+        "n_stars": 1086
+      },
+      "H\u03b2 PCA(50)": {
+        "r2_mean": 0.050754283845609004,
+        "r2_std": 0.020859305066819437,
+        "n_valid": 2508,
+        "n_stars": 1086
+      }
+    },
+    "vr_ratio": {
+      "H\u03b2 flux (128D)": {
+        "r2_mean": -0.07154366242886656,
+        "r2_std": 0.04537777160904418,
+        "n_valid": 154,
+        "n_stars": 101
+      },
+      "H\u03b2 PCA(10)": {
+        "r2_mean": -0.04315865735904327,
+        "r2_std": 0.02754171759681832,
+        "n_valid": 154,
+        "n_stars": 101
+      },
+      "H\u03b2 PCA(50)": {
+        "r2_mean": -0.022983338210332917,
+        "r2_std": 0.028401652911199383,
+        "n_valid": 154,
+        "n_stars": 101
+      }
+    },
+    "delta_v": {
+      "H\u03b2 flux (128D)": {
+        "r2_mean": 0.15965301824321448,
+        "r2_std": 0.14135198333814825,
+        "n_valid": 190,
+        "n_stars": 125
+      },
+      "H\u03b2 PCA(10)": {
+        "r2_mean": -0.08103399058744962,
+        "r2_std": 0.22283833951370963,
+        "n_valid": 190,
+        "n_stars": 125
+      },
+      "H\u03b2 PCA(50)": {
+        "r2_mean": -0.10832826529734241,
+        "r2_std": 0.14556052621799598,
+        "n_valid": 190,
+        "n_stars": 125
+      }
+    },
+    "central_depth": {
+      "H\u03b2 flux (128D)": {
+        "r2_mean": 0.003200547340169524,
+        "r2_std": 0.0428976433003258,
+        "n_valid": 2525,
+        "n_stars": 1090
+      },
+      "H\u03b2 PCA(10)": {
+        "r2_mean": -0.009292893854978756,
+        "r2_std": 0.0723023424056607,
+        "n_valid": 2525,
+        "n_stars": 1090
+      },
+      "H\u03b2 PCA(50)": {
+        "r2_mean": 0.02762699394685699,
+        "r2_std": 0.06765670317918308,
+        "n_valid": 2525,
+        "n_stars": 1090
+      }
+    },
+    "peak_intensity": {
+      "H\u03b2 flux (128D)": {
+        "r2_mean": 0.17174300126866388,
+        "r2_std": 0.5566238489507249,
+        "n_valid": 2525,
+        "n_stars": 1090
+      },
+      "H\u03b2 PCA(10)": {
+        "r2_mean": 0.27984152775087895,
+        "r2_std": 0.18560620038960346,
+        "n_valid": 2525,
+        "n_stars": 1090
+      },
+      "H\u03b2 PCA(50)": {
+        "r2_mean": 0.37896917236340005,
+        "r2_std": 0.09951458885394251,
+        "n_valid": 2525,
+        "n_stars": 1090
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "protocol": "published population (>=3-epoch star filter), cutoff MJD 59215, context <=64, 1-step, median forecast",
+  "full_published_population": {
+    "n_test": 8118,
+    "mae_persist": 1.6307406275405711,
+    "mae": 1.5782089580713756,
+    "ratio": 0.9677866188025118,
+    "ci95": [
+      0.9547709728570745,
+      0.9806830283275954
+    ],
+    "published_reference_ratio": 0.9676
+  },
+  "ctx5_subset_same_pairs_as_stacking_head": {
+    "n_test": 7313,
+    "mae_persist": 1.4722625950237886,
+    "mae": 1.4065316861895132,
+    "ratio": 0.9553538145596823,
+    "ci95": [
+      0.9406372688054827,
+      0.969794638747611
+    ],
+    "note": "identical pairs to PCA(10) ctx5 (0.942), trained stacking head (0.932) and its control (0.945)"
+  }
+}

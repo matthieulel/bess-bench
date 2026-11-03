@@ -1,0 +1,112 @@
+{
+  "cutoff_mjd": 59215.0,
+  "grid": [
+    "pca10_ctx5",
+    "pca10_ctx10",
+    "pca50_ctx5",
+    "pca50_ctx10"
+  ],
+  "n_stars": 957,
+  "test": {
+    "pca10_ctx5": {
+      "ratio_mae": 0.941863571451312,
+      "n_train": 14475,
+      "n_test": 7313
+    },
+    "pca10_ctx10": {
+      "ratio_mae": 0.9560283022989822,
+      "n_train": 12415,
+      "n_test": 6664
+    },
+    "pca50_ctx5": {
+      "ratio_mae": 0.9833828237193056,
+      "n_train": 14475,
+      "n_test": 7313
+    },
+    "pca50_ctx10": {
+      "ratio_mae": 1.0401495612263492,
+      "n_train": 12415,
+      "n_test": 6664
+    }
+  },
+  "validation": {
+    "2017-01-01": {
+      "fit_until_mjd": 57754.0,
+      "configs": {
+        "pca10_ctx5": {
+          "ratio_mae": 0.9520544519918221,
+          "n_train": 7358,
+          "n_validation": 7117
+        },
+        "pca10_ctx10": {
+          "ratio_mae": 0.99943130893646,
+          "n_train": 5919,
+          "n_validation": 6496
+        },
+        "pca50_ctx5": {
+          "ratio_mae": 1.0249273079675532,
+          "n_train": 7358,
+          "n_validation": 7117
+        },
+        "pca50_ctx10": {
+          "ratio_mae": 1.1728791038187873,
+          "n_train": 5919,
+          "n_validation": 6496
+        }
+      },
+      "selected": "pca10_ctx5"
+    },
+    "2018-01-01": {
+      "fit_until_mjd": 58119.0,
+      "configs": {
+        "pca10_ctx5": {
+          "ratio_mae": 0.9495832651376772,
+          "n_train": 8553,
+          "n_validation": 5922
+        },
+        "pca10_ctx10": {
+          "ratio_mae": 0.9887815262385635,
+          "n_train": 6962,
+          "n_validation": 5453
+        },
+        "pca50_ctx5": {
+          "ratio_mae": 1.019132294415357,
+          "n_train": 8553,
+          "n_validation": 5922
+        },
+        "pca50_ctx10": {
+          "ratio_mae": 1.1431696701703125,
+          "n_train": 6962,
+          "n_validation": 5453
+        }
+      },
+      "selected": "pca10_ctx5"
+    },
+    "2019-01-01": {
+      "fit_until_mjd": 58484.0,
+      "configs": {
+        "pca10_ctx5": {
+          "ratio_mae": 0.9523378981882342,
+          "n_train": 10173,
+          "n_validation": 4302
+        },
+        "pca10_ctx10": {
+          "ratio_mae": 0.9818614175471059,
+          "n_train": 8425,
+          "n_validation": 3990
+        },
+        "pca50_ctx5": {
+          "ratio_mae": 1.0029801793218562,
+          "n_train": 10173,
+          "n_validation": 4302
+        },
+        "pca50_ctx10": {
+          "ratio_mae": 1.1103764228907609,
+          "n_train": 8425,
+          "n_validation": 3990
+        }
+      },
+      "selected": "pca10_ctx5"
+    }
+  }
+}

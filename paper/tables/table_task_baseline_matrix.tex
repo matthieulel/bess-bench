@@ -1,0 +1,20 @@
+\begin{tabular}{lccc}
+  \toprule
+  Baseline & SpecProbe & LineTransfer & EWForecast \\
+  \midrule
+  \multicolumn{4}{l}{\emph{Representations (spectrum $\to$ vector)}} \\
+  BeMAE $z_{128}$            & \checkmark & n/a (H$\alpha$-only encoder) & \checkmark\,($+$ridge, $+$Transformer) \\
+  PCA                        & \checkmark\,(10/32/50) & \checkmark\,(10/50) & \checkmark\,(10/50, $+$ridge) \\
+  Raw flux (128-bin)         & \checkmark & \checkmark & n/a (no temporal head) \\
+  Handcrafted 5-D LOO        & \checkmark & n/a (control) & n/a \\
+  \midrule
+  \multicolumn{4}{l}{\emph{Univariate forecasters (scalar series $\to$ next value)}} \\
+  Persistence                & n/a (architecture) & n/a (architecture) & \checkmark \\
+  Chronos-Bolt, TimesFM-2.0  & n/a (architecture) & n/a (architecture) & \checkmark \\
+  Moirai, Moirai-MoE, Time-MoE & n/a (architecture) & n/a (architecture) & \checkmark \\
+  \bottomrule
+\end{tabular}
+% "n/a (architecture)": univariate forecasters consume a scalar time series
+% and cannot embed a 128-bin spectrum; conversely a frozen encoder needs a
+% temporal head to produce a forecast. BeMAE is pre-trained on the H-alpha
+% window only and is not applied to H-beta in v1.0.
